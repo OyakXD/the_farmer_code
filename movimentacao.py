@@ -2,15 +2,11 @@ from plantacao import *
 
 def move_n_dir(n, dir):
 	for i in range(n):
-		if get_pos_y() <= 2:
-			plantar_carrot()
-		else:
-			plantar_arbusto()
+		posicao_plant()
 		move(dir)
 		
 
 def move_direita(n):
-	
 	move_n_dir(n, East)
 	
 
