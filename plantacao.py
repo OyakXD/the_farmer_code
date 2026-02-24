@@ -7,11 +7,6 @@ def plantar_carrot():
 		till()
 		use_item(Items.Water)
 		plant(Entities.Carrot)
-		
-	else:
-		if can_harvest():
-			harvest()
-		plant(Entities.Bush)
 
 def plantar_tree():
 	if can_harvest():
@@ -35,10 +30,13 @@ def plantar_pumpkin():
 		plant(Entities.Pumpkin)
 		
 def posicao_plant():
-	if get_pos_y() <= 2:
+	if get_pos_y() <= 3:
 		plantar_carrot()
-	elif get_pos_y() >= 3 and get_pos_y() <= 5:
+	elif get_pos_y() >= 4 and get_pos_y() <= 7:
 		plantar_pumpkin()
 	else:
-		plantar_arbusto()
+		if (get_pos_x() == 0 and get_pos_y() == 8) or (get_pos_x() == 11 and get_pos_y() == 11):
+			plantar_tree()
+		else:	
+			plantar_arbusto()
 		
