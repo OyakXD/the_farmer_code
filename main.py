@@ -5,10 +5,12 @@ from count_custos import *
 tamanhoMundo = get_world_size() - 1
 
 while True:
-	
 	move_direita(tamanhoMundo)
 	move_cima(1)
 	move_esquerda(tamanhoMundo)
 	move_cima(1)
+	
+	
+
 	
 	

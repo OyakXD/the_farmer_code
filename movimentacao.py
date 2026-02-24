@@ -5,11 +5,9 @@ def move_n_dir(n, dir):
 		posicao_plant()
 		move(dir)
 		
-
 def move_direita(n):
 	move_n_dir(n, East)
 	
-
 def move_cima(n):
 	move_n_dir(n, North)
 	
