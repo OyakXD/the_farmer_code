@@ -1,22 +1,14 @@
 from movimentacao import *
 from plantacao import *
 
-# MOVIMENTAÇÃO
+tamanhoMundo = get_world_size() - 1
+
 while True:
 	
-	plantar_tree()
-	move_direita(5)
+	move_direita(tamanhoMundo)
 	move_cima(1)
-	plantar_tree()
-	move_esquerda(5)
+	move_esquerda(tamanhoMundo)
 	move_cima(1)
-	plantar_tree()
-	move_direita(5)
-	move_cima(1)
-	plantar_tree()
-	move_esquerda(5)
-	move_cima(1)
-	plantar_tree()
 	
 	
 	
