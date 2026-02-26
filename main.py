@@ -1,16 +1,7 @@
 from movimentacao import *
-from plantacao import *
-from count_custos import *
 
-tamanhoMundo = get_world_size() - 1
+preparar_campo()
 
 while True:
-	move_direita(tamanhoMundo)
-	move_cima(1)
-	move_esquerda(tamanhoMundo)
-	move_cima(1)
-	
-	
-
-	
+   	percorrer_campo()
 	

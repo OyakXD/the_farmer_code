@@ -1,3 +1,4 @@
 *__builtins__.py
 *Debug.py
 *save.json
+__pycache__

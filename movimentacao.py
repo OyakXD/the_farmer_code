@@ -1,20 +1,36 @@
-from plantacao import *
-
-def move_n_dir(n, dir):
+def mover(n, dir, agir=True):
 	for i in range(n):
-		posicao_plant()
+		if agir:
+			harvest()
+			plant(Entities.Pumpkin)
 		move(dir)
-		
-def move_direita(n):
-	move_n_dir(n, East)
-	
-def move_cima(n):
-	move_n_dir(n, North)
-	
-def move_baixo(n):
-	move_n_dir(n, South)
 
-def move_esquerda(n):
-	move_n_dir(n, West)
+def ir(n, dir):
+	mover(n, dir, False)
 	
 
+def preparar_campo():
+	for linha in range(16):
+		for coluna in range(16):
+			till()
+			if coluna < 15:
+				if linha % 2 == 0:
+					ir(1, East)
+				else:
+					ir(1, West)
+		if linha < 15:
+			ir(1, North)
+
+def percorrer_campo():
+	for linha in range(16):
+		for coluna in range(16):
+			harvest()
+			plant(Entities.Pumpkin)
+			use_item(Items.Water)
+			if coluna < 15:
+				if linha % 2 == 0:
+					ir(1, East)
+				else:
+					ir(1, West)
+		if linha < 15:
+			ir(1, North)
