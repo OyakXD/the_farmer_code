@@ -1,13 +1,7 @@
-def mover(n, dir, agir=True):
-	for i in range(n):
-		if agir:
-			harvest()
-			plant(Entities.Pumpkin)
-		move(dir)
-
 def ir(n, dir):
-	mover(n, dir, False)
-	
+    for i in range(n):
+        move(dir)
+
 def percorrer_campo(preparando=False):
     for linha in range(16):
         for coluna in range(16):
